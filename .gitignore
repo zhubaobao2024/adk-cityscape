@@ -1,6 +1,9 @@
 gemini_*.png
 .env
 .venv
+.env
+.env.local
+node_modules/
 .adk
 __pycache__
 .vscode

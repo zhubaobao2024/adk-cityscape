@@ -1,0 +1,28 @@
+{
+    "capabilities": {},
+    "defaultInputModes": [
+        "text/plain"
+    ],
+    "defaultOutputModes": [
+        "text/plain"
+    ],
+    "description": "Creates AI-generated souvenir postcard pictures of cities featuring top landmarks, based on current weather.",
+    "name": "moodrun_agent",
+    "preferredTransport": "JSONRPC",
+    "protocolVersion": "0.3.0",
+    "skills": [
+        {
+            "description": "Generate city postcards",
+            "id": "moodrun",
+            "name": "MoodRun",
+            "tags": [
+                "nano-banana",
+                "weather",
+                "maps-grounding"
+            ]
+        }
+    ],
+    "supportsAuthenticatedExtendedCard": false,
+    "url": "http://localhost:8000/a2a/moodrun",
+    "version": "0.0.1"
+}
