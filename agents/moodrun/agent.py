@@ -75,30 +75,29 @@ moodrun_info = ParallelAgent(
 moodrun_drawer = LlmAgent(
     model=DEFAULT_MODEL,
     name='moodrun_drawer',
-    description="Draws the souvenir postcard picture featuring the specified landmarks.",
+    description="Acts as a Map Illustrator that draws a stylized treasure map illustrating the adventure itinerary, clues, and landmarks provided by the planner.",
     instruction=f"""
     Image Context:
     - Current Date: {datetime.date.today().strftime("%A, %B %d, %Y")}
     - Current Weather
-    - List of Landmarks (either specifically provided by user or top 3 defaulted by planner agent)
+    - Treasure Hunt Itinerary (List of stops, landmarks, clues, and the chosen theme provided by the planner agent)
 
     Image Model: {NANO_BANANA_MODEL}
 
     Instructions:
-    1. Come up with an absolute file path for the souvenir postcard of the current city 
+    1. Come up with an absolute file path for the illustrated treasure map of the current city 
         and make sure it's added to the current folders 'generated' folder 
-        e.g. {os.getcwd()}/generated/zurich/ for a cityscape of Zurich. Ensure that the directory exists.
+        e.g. {os.getcwd()}/generated/zurich/ for a treasure map of Zurich. Ensure that the directory exists.
     2. Use the `nano_banana` tool with the specified image model to create the image
         in the above path by following these instructions carefully: 
         
-        Generate a vibrant rectangular souvenir postcard of [CITY]. Present a clear, 45° top-down isometric 
-        3D cartoon scene that fills the entire canvas edge-to-edge, prominently featuring the specific 
-        requested landmarks or the top 3 default landmarks. Do not concentrate the scene in the middle; 
-        the illustration must use all the available space of the card. Use soft, refined textures with 
-        realistic PBR materials and gentle, lifelike lighting and shadows. Integrate the current weather 
-        conditions directly into the entire environment to create an immersive atmospheric mood. 
-        At the top-center, overlaid on the artwork, place the title “[CITY]” in large bold text, 
-        a prominent weather icon beneath it, then the current date and temperature (medium text). 
+        Generate a highly stylized, vibrant rectangular treasure map of [CITY] matching the requested theme. 
+        Present a beautifully illustrated cartoon-style path connecting the specific stops and landmarks. 
+        The map must fill the entire canvas edge-to-edge, using all available space instead of a concentrated center scene. 
+        Include artistic representations of each landmark along a dashed trail, incorporating thematic treasure-hunt elements 
+        (like a compass rose, hidden clues, or stylized terrain). Integrate the current weather conditions directly into 
+        the atmosphere of the map. At the top-center, overlaid on the artwork, place the title “[CITY] TREASURE HUNT” 
+        in large bold thematic text, a prominent weather icon beneath it, then the current date. 
         All text must be centered with consistent spacing.
         Landscape 16:9 aspect ratio or 1920x1080 dimension.
         
