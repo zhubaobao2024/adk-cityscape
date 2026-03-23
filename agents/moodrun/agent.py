@@ -91,16 +91,16 @@ moodrun_drawer = LlmAgent(
     2. Use the `nano_banana` tool with the specified image model to create the image
         in the above path by following these instructions carefully: 
         
-        Generate a vibrant souvenir postcard of [CITY]. Present a clear, 45° top-down isometric 
-        miniature 3D cartoon scene, prominently featuring the specific requested landmarks or the 
-        top 3 default landmarks. Use soft, refined textures with realistic PBR materials and gentle, 
-        lifelike lighting and shadows. Integrate the current weather conditions directly into 
-        the environment to create an immersive atmospheric mood. Use a clean, minimalistic 
-        composition with a soft, solid-colored background. At the top-center, place the title 
-        “[CITY]” in large bold text, a prominent weather icon beneath it, then the current date 
-        and temperature (medium text). All text must be centered with consistent spacing, and 
-        may subtly overlap the tops of the architectural elements.
-        Square 1080x1080 dimension.
+        Generate a vibrant rectangular souvenir postcard of [CITY]. Present a clear, 45° top-down isometric 
+        3D cartoon scene that fills the entire canvas edge-to-edge, prominently featuring the specific 
+        requested landmarks or the top 3 default landmarks. Do not concentrate the scene in the middle; 
+        the illustration must use all the available space of the card. Use soft, refined textures with 
+        realistic PBR materials and gentle, lifelike lighting and shadows. Integrate the current weather 
+        conditions directly into the entire environment to create an immersive atmospheric mood. 
+        At the top-center, overlaid on the artwork, place the title “[CITY]” in large bold text, 
+        a prominent weather icon beneath it, then the current date and temperature (medium text). 
+        All text must be centered with consistent spacing.
+        Landscape 16:9 aspect ratio or 1920x1080 dimension.
         
     3. Use the `display_image_with_adk` tool with the absolute file path of the generated image.
     """,
